@@ -1,0 +1,4 @@
+<launch>
+  <node name="screenshot_node" pkg="screenshot"  type="screenshot2.py"/>
+</launch>
+
