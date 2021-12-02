@@ -39,9 +39,9 @@ def callback(data_):
         open_cv_image = np.array(img)
         # Convert RGB to BGR
         open_cv_image = open_cv_image[:, :, ::-1].copy()
-        #im = cv2.resize(open_cv_image, (640, 480))
+        im = cv2.resize(open_cv_image, (1280, 720))
 
-        msg = bridge.cv2_to_imgmsg(open_cv_image,"bgr8")
+        msg = bridge.cv2_to_imgmsg(im,"bgr8")
         image_pub.publish(msg)
 
 
